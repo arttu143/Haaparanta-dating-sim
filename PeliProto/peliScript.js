@@ -100,6 +100,7 @@ document.querySelector("#closeModal").addEventListener("click", () => {
     document.querySelector("#inventory img").src = "";
     document.querySelector("#inventory").close();
 
+});    
 document.querySelector("#menuModal").addEventListener("click", () => {
 
     document.querySelector("dialog img").src = "";

@@ -61,21 +61,19 @@ for(const city of cityArray){
 
         console.log(city.name)
 
-        myMove();
-
         if(shinyChance == 1){
             
-            document.querySelector("dialog img").src = 'img/shiny.png';
+            document.querySelector("#cityModal img").src = 'img/shiny.png';
 
         }
 
         else{
 
-            document.querySelector("dialog img").src = city.image;
+            document.querySelector("#cityModal img").src = city.image;
 
         }
 
-        document.querySelector("dialog").showModal();
+        document.querySelector("#cityModal").showModal();
 
     });
 
@@ -83,32 +81,23 @@ for(const city of cityArray){
 
 };
 
-document.querySelector("dialog").addEventListener("click", () => {
+document.querySelector("#cityModal").addEventListener("click", () => {
 
-    document.querySelector("dialog img").src = "";
-    document.querySelector("dialog").close();
+    document.querySelector("#cityModal img").src = "";
+    document.querySelector("#cityModal").close();
 
 });
 
 document.querySelector("#invBtn").addEventListener("click", () => {
 
-    document.querySelector("dialog img").src = 'img/inventory.png';
-    document.querySelector("dialog").showModal();
+    document.querySelector("#inventory img").src = 'img/inventory.png';
+    document.querySelector("#inventory").showModal();
 
 });
 
-let id = null;
-function myMove(x, y) {
-  let pos = 0;
-  clearInterval(id);
-  id = setInterval(frame, 5);
-  function frame() {
-    if (pos == 350) {
-      clearInterval(id);
-    } else {
-      pos++; 
-      player.style.top = pos + "px"; 
-      player.style.left = pos + "px"; 
-    }
-  }
-}
+document.querySelector("#closeModal").addEventListener("click", () => {
+
+    document.querySelector("#inventory img").src = "";
+    document.querySelector("#inventory").close();
+
+});

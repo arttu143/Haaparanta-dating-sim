@@ -75,7 +75,7 @@ for(const city of cityArray){
 
         }
 
-        document.querySelector("dialog").showModal();
+        document.querySelector("#cityModal").showModal();
 
     });
 
@@ -83,17 +83,31 @@ for(const city of cityArray){
 
 };
 
-document.querySelector("dialog").addEventListener("click", () => {
+document.querySelector("#cityModal").addEventListener("click", () => {
 
     document.querySelector("dialog img").src = "";
-    document.querySelector("dialog").close();
+    document.querySelector("#cityModal").close();
 
 });
 
 document.querySelector("#invBtn").addEventListener("click", () => {
 
     document.querySelector("dialog img").src = 'img/inventory.png';
-    document.querySelector("dialog").showModal();
+    document.querySelector("#cityModal").showModal();
+
+});
+
+//Miska was here
+document.querySelector("#menuBtn").addEventListener("click", () => {
+
+    document.querySelector("#menuModal").showModal();
+
+});
+
+document.querySelector("#menuModal").addEventListener("click", () => {
+
+    document.querySelector("dialog img").src = "";
+    document.querySelector("#menuModal").close();
 
 });
 

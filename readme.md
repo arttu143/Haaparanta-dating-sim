@@ -1,6 +1,6 @@
 # Haaparanta-dating-sim #
 
-
+``` bash
 file-structure:
 projekt/
 │
@@ -9,3 +9,4 @@ projekt/
   ├──index.html   # html files (one or more)
   ├──main.css     # css
   ├──main.js      # js
+```

@@ -6,6 +6,8 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 0;
+    container-type: inline-size;
+    overflow: hidden;
 
 }
 
@@ -52,15 +54,6 @@
 
 }
 
-dialog[closed] {
-
-    position: fixed;
-    transition: all 0.5s ease-in-out;
-    opacity: 0;
-    display: block;
-
-}
-
 dialog[open] {
 
     opacity: 1;
@@ -101,12 +94,52 @@ dialog[open] {
 
 }
 
+#invBtn, #menuBtn {
+    position: absolute;
+    bottom: 4%;
+    width: 11%;
+    height: 5.5%;
+    max-height: 5.5%;
+    
+    appearance: none;
+    -webkit-appearance: none;
+    
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+    background-color: #f0f0f0;
+    color: #111;
+    font-size: 1.5cqi;
+    line-height: 1;
+    border-radius: 0.5cqi;
+    border: 0.15cqi solid #333;
+    cursor: pointer;
+}
+
 #invBtn {
 
-    position: absolute;
-    left: 90%;
-    top: 90%;
+    right: 3%;
 
+}
+
+#menuBtn {
+
+    left: 3%;
+
+}
+
+#invBtn, #menuBtn span {
+    display: block;
+    line-height: 1;
+    white-space: nowrap;
 }
 
 #playerPin {
@@ -125,15 +158,33 @@ dialog[open] {
 .invModal {
 
     position: absolute;
-    border: none;
+    left: 73.5%;
+    top: 5%;
+    width: 25%;
+    height: 80%;
+    
     border-radius: 8px;
-    left: 39%;
-    top: -21%;
-    padding: 0;
-    width: 15vw;
-    height: 60vh;
-    overflow-y: auto;
+    overflow: hidden;
+    z-index: 20;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 
+}
+
+#invImg {
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+.invModal .closeBtn {
+    top: 4%;
+    right: 4%;
+    width: 16%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    font-size: clamp(12px, 1.5vw, 20px);
 }
 
 .closeBtn {

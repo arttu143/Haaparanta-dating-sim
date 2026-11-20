@@ -11,14 +11,33 @@
         <div class="title">
             <h1>Title</h1>
         </div>
-        <div class="new game"></div>
+        <div class="new game">
             <button type="new">new game</button>
-        <div class="load game"></div>
+        </div>
+        <div class="load game">
             <button type="load">Load game</button>
+        </div>
         <div class="options">
             <button type="options">Options</button>
         </div>
     </dialog>
+
+    <dialog id="stingModal" class="modal">
+        <div class="fullscreen">
+            <input type="checkbox" value="sound">
+        </div>
+        <div class="load game">
+            <button type="checkbox" value="fullscreen">
+        </div>
+        <div class="palette">
+            <select name="palette" id="palettechose">
+                <option value="palette1">Palette1</option>
+                <option value="palette2">Palette2</option>
+                <option value="palette3">Palette3</option>
+            </select>
+        </div>
+    </dialog>
+    
     <div class="mapContainer">
         <img src="img/map.png" alt="Map" class="mapImg" />
         <button id="invBtn">

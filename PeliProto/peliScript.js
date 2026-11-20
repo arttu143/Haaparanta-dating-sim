@@ -100,4 +100,38 @@ document.querySelector("#closeModal").addEventListener("click", () => {
     document.querySelector("#inventory img").src = "";
     document.querySelector("#inventory").hidden = true;
 
+});    
+document.querySelector("#menuModal").addEventListener("click", () => {
+
+    document.querySelector("dialog img").src = "";
+    document.querySelector("#menuModal").close();
+
 });
+document.querySelector("#menuBtn").addEventListener("click", () => {
+
+    document.querySelector("#menuModal").showModal();
+
+});
+
+document.querySelector("#menuModal").addEventListener("click", () => {
+
+    document.querySelector("dialog img").src = "";
+    document.querySelector("#menuModal").close();
+
+});
+
+let id = null;
+function myMove(x, y) {
+  let pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      player.style.top = pos + "px"; 
+      player.style.left = pos + "px"; 
+    }
+  }
+}

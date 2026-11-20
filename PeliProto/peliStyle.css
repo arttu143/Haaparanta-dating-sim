@@ -1,0 +1,102 @@
+.mapContainer {
+
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
+
+}
+
+.mapImg {
+
+    display: block;
+    width: 100%;
+    height: auto;
+
+}
+
+.cityPin {
+
+    position: absolute;
+    transform: translate(-50%, -50%); 
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    background-color: #e63946;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.tooltip {
+    
+    display: none;
+    position: absolute;
+    bottom: 140%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    pointer-events: none;
+
+}
+
+.cityPin:hover .tooltip {
+
+    display: block;
+
+}
+
+dialog[closed] {
+
+    position: fixed;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    display: block;
+
+}
+
+dialog[open] {
+
+    opacity: 1;
+
+}
+
+.modal {
+
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    width: 70vw;
+    height: 70vh;
+    overflow-y: auto;
+
+}
+
+.modal::backdrop {
+
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.modalContent {
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+
+#modalImg {
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+
+}

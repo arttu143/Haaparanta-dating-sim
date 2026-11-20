@@ -7,10 +7,26 @@
     <title>Document</title>
 </head>
 <body>
+    <dialog id="menu" class="modal">
+        <div class="title">
+            <h1>Title</h1>
+        </div>
+        <div class="new game"></div>
+            <button type="new">new game</button>
+        <div class="load game"></div>
+            <button type="load">Load game</button>
+        <div class="options">
+            <button type="options">Options</button>
+        </div>
+    </dialog>
+    
     <div class="mapContainer">
         <img src="img/map.png" alt="Map" class="mapImg" />
         <button id="invBtn">
             <span>Inventory</span>
+        </button>
+        <button id="menuBtn">
+            <span>Menu</span>
         </button>
         <button id="playerPin"></button>
     </div>

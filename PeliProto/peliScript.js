@@ -6,8 +6,8 @@ const cityArray = [
 
         name: 'Helsinki',
         image:'img/battle4.jpg',
-        x:'45.3',
-        y:'93.5'
+        x:'45',
+        y:'90.5'
 
     },
     {
@@ -23,7 +23,7 @@ const cityArray = [
         name: 'Turku',
         image:'img/battle2.jpg',
         x:'9',
-        y:'81.5'
+        y:'79.5'
 
     },
     {
@@ -31,7 +31,7 @@ const cityArray = [
         name: 'Tampere',
         image:'img/battle3.jpg',
         x:'29.5',
-        y:'37.8'
+        y:'36.8'
 
     }
 
@@ -91,13 +91,13 @@ document.querySelector("#cityModal").addEventListener("click", () => {
 document.querySelector("#invBtn").addEventListener("click", () => {
 
     document.querySelector("#inventory img").src = 'img/inventory.png';
-    document.querySelector("#inventory").showModal();
+    document.querySelector("#inventory").hidden = false;
 
 });
 
 document.querySelector("#closeModal").addEventListener("click", () => {
 
     document.querySelector("#inventory img").src = "";
-    document.querySelector("#inventory").close();
+    document.querySelector("#inventory").hidden = true;
 
 });

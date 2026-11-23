@@ -210,3 +210,27 @@ dialog[open] {
     background: rgba(0, 0, 0, 0.85);
 
 }
+/*temp menu css*/
+.menuModal {
+    position: absolute;
+    top: 5%;
+    width: 20%;
+    height: 40%;
+    
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 20;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+/*temp inv css*/
+.invGrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px
+}
+.invGrid div {
+  border: 1px solid black;
+  width: auto;
+  aspect-ratio: 1/1;
+  font-size: 30px;
+}

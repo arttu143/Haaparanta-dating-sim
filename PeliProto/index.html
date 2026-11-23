@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <dialog id="menuModal" class="modal">
+    <dialog id="menu" class="menuModal">
+        <button id="closemenu" class="closeBtn" aria-label="Close">&times;</button>
         <div class="title">
             <h1>Title</h1>
         </div>
@@ -22,7 +23,8 @@
         </div>
     </dialog>
 
-    <dialog id="stingModal" class="modal">
+    <dialog id="setings" class="setingsModal">
+        <button id="closeModal" class="closeBtn" aria-label="Close">&times;</button>
         <div class="fullscreen">
             <input type="checkbox" value="sound">
         </div>
@@ -53,11 +55,24 @@
             <img id="modalImg"/>
             </div>
         </dialog>
-        <div id="inventory" class="invModal" hidden>
-            <button id="closeModal" class="closeBtn" aria-label="Close">&times;</button>
-            <span></span>
-            <img id="invImg"/>
-        </div>
+        <dialog id="inventory" class="invModal">
+            <button id="closeinv" class="closeBtn" aria-label="Close">&times;</button>
+            <h1>Inventory</h1>
+            <div id="invGrid" class="invGrid">
+                <div id="slot1"></div>
+                <div id="slot2"></div>
+                <div id="slot3"></div>
+                <div id="slot4"></div>
+                <div id="slot5"></div>
+                <div id="slot6"></div>
+                <div id="slot7"></div>
+                <div id="slot8"></div>
+                <div id="slot9"></div>
+                <div id="slot10"></div>
+                <div id="slot11"></div>
+                <div id="slot12"></div>
+            </div>
+        </dialog>
     </div>
     <script src="peliScript.js" defer></script>
 </body>

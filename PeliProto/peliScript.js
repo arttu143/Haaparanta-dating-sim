@@ -88,36 +88,21 @@ document.querySelector("#cityModal").addEventListener("click", () => {
 
 });
 
+//Temp inv and menu functionality pls check.
 document.querySelector("#invBtn").addEventListener("click", () => {
-
-    document.querySelector("#inventory img").src = 'img/inventory.png';
-    document.querySelector("#inventory").hidden = false;
-
+    document.querySelector("#inventory").showModal();
 });
 
-document.querySelector("#closeModal").addEventListener("click", () => {
-
-    document.querySelector("#inventory img").src = "";
-    document.querySelector("#inventory").hidden = true;
-
-});    
-document.querySelector("#menuModal").addEventListener("click", () => {
-
-    document.querySelector("dialog img").src = "";
-    document.querySelector("#menuModal").close();
-
+document.querySelector("#closeinv").addEventListener("click", () => {
+    document.querySelector("#inventory").close();
 });
+
+document.querySelector("#closemenu").addEventListener("click", () => {
+    document.querySelector("#menu").close();
+});
+
 document.querySelector("#menuBtn").addEventListener("click", () => {
-
-    document.querySelector("#menuModal").showModal();
-
-});
-
-document.querySelector("#menuModal").addEventListener("click", () => {
-
-    document.querySelector("dialog img").src = "";
-    document.querySelector("#menuModal").close();
-
+    document.querySelector("#menu").showModal();
 });
 
 let id = null;

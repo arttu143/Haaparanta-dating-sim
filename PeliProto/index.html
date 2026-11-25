@@ -23,15 +23,18 @@
         </div>
     </dialog>
 
-    <dialog id="setings" class="setingsModal">
+    <dialog id="settings" class="setingsModal">
         <button id="closeModal" class="closeBtn" aria-label="Close">&times;</button>
-        <div class="fullscreen">
-            <input type="checkbox" value="sound">
+        <div class="sound">
+            <label for="fullscreen">sound</label>
+            <input type="checkbox" id="sound">
         </div>
-        <div class="load game">
-            <button type="checkbox" value="fullscreen">
+        <div class="fullscreen">
+            <label for="fullscreen">fullscreen</label>
+            <input type="checkbox" id="fullscreen">
         </div>
         <div class="palette">
+            <p>palette swap</p>
             <select name="palette" id="palettechose">
                 <option value="palette1">Palette1</option>
                 <option value="palette2">Palette2</option>

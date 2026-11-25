@@ -26,8 +26,8 @@
     width: 14px;
     height: 14px;
     padding: 0;
-    background-color: #000dff;
-    border: 2px solid rgb(255, 196, 0);
+    background-color: #ff00e1;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 50%;
     cursor: pointer;
 }
@@ -39,8 +39,8 @@
     bottom: 140%;
     left: 50%;
     transform: translateX(-50%);
-    background: #222;
-    color: #fff;
+    background: #2bff00;
+    color: #001eff;
     padding: 4px 8px;
     border-radius: 4px;
     white-space: nowrap;
@@ -73,7 +73,7 @@ dialog[open] {
 
 .modal::backdrop {
 
-    background: rgba(123, 0, 0, 0.5);
+    background: rgba(190, 180, 71, 0.5);
 
 }
 
@@ -95,44 +95,40 @@ dialog[open] {
 }
 
 #invBtn, #menuBtn {
-    position: absolute;
-    bottom: 4%;
-    width: 11%;
-    height: 5.5%;
-    max-height: 5.5%;
-    
+
+    position: fixed;
+    bottom: 24px;
+    width: 130px;
+    height: 44px;
+    z-index: 20;
     appearance: none;
     -webkit-appearance: none;
-    
-    min-width: 0;
-    min-height: 0;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    
-    background-color: #ff00dd;
-    color: #111;
-    font-size: 1.5cqi;
+    background-color: #59006c;
+    color: #ffffff;
+    font-size: 16px;
     line-height: 1;
-    border-radius: 0.5cqi;
-    border: 0.15cqi solid #333;
+    border-radius: 6px;
+    border: 2px solid #333;
     cursor: pointer;
+
 }
 
 #invBtn {
 
-    right: 3%;
+    right: 24px;
 
 }
 
 #menuBtn {
 
-    left: 3%;
+    left: 24px;
 
 }
 
@@ -149,17 +145,20 @@ dialog[open] {
     width: 30px;
     height: 30px;
     padding: 0;
-    background-color: #fff200;
-    border: 2px solid rgb(0, 255, 81);
+    background-color: #00ffe5;
+    border: 2px solid white;
     border-radius: 50%;
     cursor: pointer;
+    pointer-events: none;
+    z-index: 10;
+    transition: left 0.8s ease-in-out, top 0.8s ease-in-out;
+
 }
 
 .invModal {
 
-    position: absolute;
-    left: 73.5%;
-    top: 5%;
+    position: fixed;
+    left: 67%;
     width: 30vw;
     height: 70vw;
     border-radius: 8px;
@@ -178,12 +177,14 @@ dialog[open] {
 }
 
 .invModal .closeBtn {
+
     top: 4%;
     right: 4%;
     width: 16%;
     height: auto;
     aspect-ratio: 1 / 1;
     font-size: clamp(12px, 1.5vw, 20px);
+
 }
 
 .closeBtn {
@@ -195,8 +196,8 @@ dialog[open] {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background: rgba(25, 0, 79, 0.6);
-    color: #ffffff;
+    background: rgba(112, 112, 112, 0.6);
+    color: #ff5500;
     border: none;
     font-size: 20px;
     line-height: 1;
@@ -206,12 +207,14 @@ dialog[open] {
 
 .closeBtn:hover {
 
-    background: rgba(83, 83, 83, 0.85);
+    background: rgba(0, 0, 0, 0.85);
 
 }
+
 /*temp menu css*/
 .menuModal {
-    position: absolute;
+
+    position: fixed;
     top: 5%;
     width: 20%;
     height: 40%;
@@ -219,17 +222,38 @@ dialog[open] {
     border-radius: 8px;
     overflow: hidden;
     z-index: 20;
-    box-shadow: 0 8px 20px rgba(4, 66, 147, 0.4);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    
 }
+
+/*temp settings css*/
+.settingsModal {
+
+    position: fixed;
+    top: 5%;
+    width: 20%;
+    height: 40%;
+    
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 20;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+
+}
+
 /*temp inv css*/
 .invGrid {
+
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 10px
+
 }
 .invGrid div {
+
   border: 1px solid black;
   width: auto;
   aspect-ratio: 1/1;
   font-size: 30px;
+
 }

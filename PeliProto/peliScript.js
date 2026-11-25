@@ -1,5 +1,7 @@
 const player = document.querySelector("#playerPin");
 
+const paletteStyle = document.querySelector("link[href='peliStyle.css']")
+
 const cityArray = [
 
     {
@@ -88,21 +90,62 @@ document.querySelector("#cityModal").addEventListener("click", () => {
 
 });
 
-//Temp inv and menu functionality pls check.
 document.querySelector("#invBtn").addEventListener("click", () => {
+
     document.querySelector("#inventory").showModal();
+
 });
 
 document.querySelector("#closeinv").addEventListener("click", () => {
+
     document.querySelector("#inventory").close();
+
 });
 
 document.querySelector("#closemenu").addEventListener("click", () => {
+
     document.querySelector("#menu").close();
+
 });
 
 document.querySelector("#menuBtn").addEventListener("click", () => {
+
     document.querySelector("#menu").showModal();
+
+});
+
+document.querySelector(".options").addEventListener("click", () => {
+
+    document.querySelector("#settings").showModal();
+    
+});
+
+document.querySelector("#closeModal").addEventListener("click", () => {
+
+    document.querySelector("#settings").close();
+    
+});
+
+document.querySelector("#palettechoose").addEventListener("click", () => {
+
+    if(document.querySelector("select[name='palette']").value == "palette2"){
+
+        paletteStyle.setAttribute("href", "peliStyle2.css")
+
+    }
+
+    else if(document.querySelector("select[name='palette']").value == "palette3"){
+
+        paletteStyle.setAttribute("href", "peliStyle3.css")
+
+    }
+
+    else {
+
+        paletteStyle.setAttribute("href", "peliStyle.css")
+
+    };
+    
 });
 
 let id = null;

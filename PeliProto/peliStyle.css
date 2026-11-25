@@ -160,9 +160,8 @@ dialog[open] {
     position: absolute;
     left: 73.5%;
     top: 5%;
-    width: 25%;
-    height: 80%;
-    
+    width: 30vw;
+    height: 70vw;
     border-radius: 8px;
     overflow: hidden;
     z-index: 20;

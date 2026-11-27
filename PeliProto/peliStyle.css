@@ -94,7 +94,7 @@ dialog[open] {
 
 }
 
-#invBtn, #menuBtn {
+/* #invBtn, #menuBtn {
 
     position: fixed;
     bottom: 24px;
@@ -118,7 +118,7 @@ dialog[open] {
     border: 2px solid #333;
     cursor: pointer;
 
-}
+} */
 
 #invBtn {
 

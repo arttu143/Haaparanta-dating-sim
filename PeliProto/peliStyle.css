@@ -297,6 +297,8 @@ dialog[open] {
 
 .button-2:hover {
   background-color: rgba(51, 51, 51, 0.12);
+}
+
 /*temp character ccss*/
 .character {
     display: block;
@@ -317,4 +319,4 @@ dialog[open] {
     z-index: 1;
     top: 10%;
     right: 10%;
-}}
+}

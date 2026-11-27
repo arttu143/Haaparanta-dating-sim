@@ -1,37 +1,39 @@
 const player = document.querySelector("#playerPin");
 
+const paletteStyle = document.querySelector("link[href='peliStyle.css']")
+
 const cityArray = [
 
     {
 
         name: 'Helsinki',
         image:'img/battle4.jpg',
-        x:'45',
-        y:'90.5'
+        x:'35.2',
+        y:'99.25'
 
     },
     {
 
         name: 'Jyväskylä',
         image:'img/battle.jpg',
-        x:'56',
-        y:'5'
+        x:'42.7',
+        y:'77.3'
 
     },
     {
 
         name: 'Turku',
         image:'img/battle2.jpg',
-        x:'9',
-        y:'79.5'
+        x:'10.7',
+        y:'96.3'
 
     },
     {
 
         name: 'Tampere',
         image:'img/battle3.jpg',
-        x:'29.5',
-        y:'36.8'
+        x:'24.3',
+        y:'85.5'
 
     }
 
@@ -55,29 +57,48 @@ for(const city of cityArray){
 
     cityBtn.addEventListener('click', () => {
         
-        let shinyChance = Math.floor(Math.random() * 8192) + 1;
+        const targetLeft = `${city.x}%`;
+        const targetTop = `${city.y}%`;
 
-        player.setAttribute("style", `left: ${city.x}%; top:${city.y}%`);
+        function openCityModal() {
 
-        console.log(city.name)
+            let shinyChance = Math.floor(Math.random() * 8192) + 1;
 
-        if(shinyChance == 1){
+            if (shinyChance === 1) {
+
+                document.querySelector("#cityModal img").src = 'img/shiny.png';
+
+            }
             
-            document.querySelector("#cityModal img").src = 'img/shiny.png';
+            else {
+
+                document.querySelector("#cityModal img").src = city.image;
+
+            };
+
+            document.querySelector("#cityModal").showModal();
+
+        };
+
+        if (player.style.left === targetLeft && player.style.top === targetTop) {
+
+            openCityModal();
+            return;
 
         }
 
-        else{
+        player.style.left = targetLeft;
+        player.style.top = targetTop;
 
-            document.querySelector("#cityModal img").src = city.image;
+        player.addEventListener('transitionend', () => {
+            
+            openCityModal();
 
-        }
-
-        document.querySelector("#cityModal").showModal();
+        });
 
     });
 
-    document.querySelector(".mapContainer").appendChild(cityBtn)
+    document.querySelector(".mapContainer").appendChild(cityBtn);
 
 };
 
@@ -88,35 +109,60 @@ document.querySelector("#cityModal").addEventListener("click", () => {
 
 });
 
-//Temp inv and menu functionality pls check.
 document.querySelector("#invBtn").addEventListener("click", () => {
+
     document.querySelector("#inventory").showModal();
+
 });
 
 document.querySelector("#closeinv").addEventListener("click", () => {
+
     document.querySelector("#inventory").close();
+
 });
 
 document.querySelector("#closemenu").addEventListener("click", () => {
+
     document.querySelector("#menu").close();
+
 });
 
 document.querySelector("#menuBtn").addEventListener("click", () => {
+
     document.querySelector("#menu").showModal();
+
 });
 
-let id = null;
-function myMove(x, y) {
-  let pos = 0;
-  clearInterval(id);
-  id = setInterval(frame, 5);
-  function frame() {
-    if (pos == 350) {
-      clearInterval(id);
-    } else {
-      pos++; 
-      player.style.top = pos + "px"; 
-      player.style.left = pos + "px"; 
+document.querySelector(".options").addEventListener("click", () => {
+
+    document.querySelector("#settings").showModal();
+    
+});
+
+document.querySelector("#closeModal").addEventListener("click", () => {
+
+    document.querySelector("#settings").close();
+    
+});
+
+document.querySelector("#palettechoose").addEventListener("click", () => {
+
+    if(document.querySelector("select[name='palette']").value == "palette2"){
+
+        paletteStyle.setAttribute("href", "peliStyle2.css")
+
     }
-  }
-}
+
+    else if(document.querySelector("select[name='palette']").value == "palette3"){
+
+        paletteStyle.setAttribute("href", "peliStyle3.css")
+
+    }
+
+    else {
+
+        paletteStyle.setAttribute("href", "peliStyle.css")
+
+    };
+    
+});

@@ -1,6 +1,9 @@
 test.css
 test.html
 .DS_store/
+/PeliProto/.DS_Store/
+.DS_Store
+/PeliProto/.DS_store/
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 

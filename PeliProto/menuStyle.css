@@ -1,0 +1,55 @@
+body {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.title {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 96px;       /* Large size to match the image */
+  margin: 0 0 60px 0;    /* Space below the title */
+  color: #111111;
+}
+
+/* 2-column grid for the buttons */
+.haha {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 45px;      /* Horizontal space between New Game & Load Game */
+  row-gap: 35px;         /* Vertical space above Options */
+  justify-items: center;
+}
+
+.button-2 {
+  background-color: #f3f3f3;
+  border-radius: 14px;
+  border-width: 0;
+  color: #333333;
+  cursor: pointer;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  padding: 24px 0;
+  width: 310px;          /* Wide button proportions */
+  text-align: center;
+  transition: all 200ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-2:hover {
+  background-color: #e6e6e6;
+}
+
+/* Spans across both columns so it centers neatly underneath */
+.options-btn {
+  grid-column: 1 / -1;
+}

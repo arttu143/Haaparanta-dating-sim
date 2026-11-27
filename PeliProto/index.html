@@ -5,24 +5,23 @@
     <link rel="stylesheet" type="text/css" href="peliStyle.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <dialog id="menu" class="menuModal">
-        <button id="closemenu" class="closeBtn" aria-label="Close">&times;</button>
-        <div class="title">
-            <h1>Title</h1>
-        </div>
-        <div class="new game">
-            <button type="new">new game</button>
-        </div>
-        <div class="load game">
-            <button type="load">Load game</button>
-        </div>
-        <div class="options">
-            <button type="options">Options</button>
-        </div>
-    </dialog>
+<dialog id="menu" class="menuModal">
+  <button id="closemenu" class="closeBtn" aria-label="Close">&times;</button>
 
+  <h1 class="title">Title</h1>
+
+  <button type="button" class="button-2 newgame">New Game</button>
+
+  <button type="button" class="button-2 loadgame">Load Game</button>
+
+  <button type="button" class="button-2 options">Options</button>
+
+</dialog>
     <dialog id="settings" class="settingsModal">
         <button id="closeModal" class="closeBtn" aria-label="Close">&times;</button>
         <div class="sound">
@@ -64,10 +63,10 @@
 
     <div class="mapContainer">
         <img src="img/map2.png" alt="Map" class="mapImg" />
-        <button id="invBtn">
+        <button type="button" class="button-2 inv" id="invBtn">
             <span>Inventory</span>
         </button>
-        <button id="menuBtn">
+        <button type="button" class="button-2 menu" id="menuBtn">
             <span>Menu</span>
         </button>
         <button id="playerPin"></button>
@@ -82,5 +81,7 @@
         </dialog>
     </div>
     <script src="peliScript.js" defer></script>
+
+    <p><a href="mainmenu.html">temp</a></p>
 </body>
 </html>
